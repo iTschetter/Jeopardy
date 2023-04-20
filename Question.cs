@@ -31,8 +31,8 @@ namespace Jeopardy
                 // OOP Trivia
                 new Question { Description = "What is the mechanism that binds together code and the data it manipulates, and it is a protective shield that prevents the data from being accessed by the code outside this shield", Answer="What is encapsulation", PointValue=200, Category="OOP Trivia"},
                 new Question { Description = "What concept's main goal is to handle complexity by hiding unnecessary details from the user", Answer="What is abstraction", PointValue=400, Category="OOP Trivia"},
-                new Question { Description = "What concept allows a child class to reuse and/or modify the behavior of a parent class?", Answer="What is inheritance", PointValue=600, Category="OOP Trivia"},
-                new Question { Description = "", Answer="W is", PointValue=, Category=""},
+                new Question { Description = "What concept allows a child class to reuse and/or modify the behavior of a parent class?", Answer="What is inheritance", PointValue=600, Category="OOP Trivia"}
+                /*new Question { Description = "", Answer="W is", PointValue=, Category=""},
                 new Question { Description = "", Answer="W is", PointValue=, Category=""},
 
                 // 2a
@@ -89,7 +89,7 @@ namespace Jeopardy
                 new Question { Description = "", Answer="W is", PointValue=, Category=""},
                 new Question { Description = "", Answer="W is", PointValue=, Category=""},
                 new Question { Description = "", Answer="W is", PointValue=, Category=""},
-                new Question { Description = "", Answer="W is", PointValue=, Category=""}
+                new Question { Description = "", Answer="W is", PointValue=, Category=""}*/
             };
     }
 }

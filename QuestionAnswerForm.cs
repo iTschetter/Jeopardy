@@ -21,6 +21,17 @@ namespace Jeopardy
         public void UpdateQuestionForm(string Category, int PointValue)
         {
             label1.Text = (from q in Questions where q.Category == Category && q.PointValue == PointValue select q.Description).First();
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+        }
+        public void Exit()
+        {
+            Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Owner.Show();
+            Hide();
         }
     }
 }

@@ -26,7 +26,7 @@ namespace Jeopardy
             get { return _scoreCap; }
             set { _scoreCap = value; }
         }
-        QuestionAnswerForm answerForm = new QuestionAnswerForm();
+        QuestionAnswerForm answerForm;
         public List<string> Categories = new List<string>();
         public Jeopardy()
         {
@@ -35,6 +35,7 @@ namespace Jeopardy
         public Jeopardy(int numberOfPlayers, int scoreCap, List<string> categories)
         {
             InitializeComponent();
+            answerForm = new QuestionAnswerForm();
             NumberOfPlayers = numberOfPlayers;
             ScoreCap = scoreCap;
             Categories = categories;
@@ -57,6 +58,7 @@ namespace Jeopardy
 
         private void Jeopardy_FormClosed(object sender, FormClosedEventArgs e)
         {
+            answerForm.Exit();
             Application.Exit();
         }
 
@@ -67,7 +69,10 @@ namespace Jeopardy
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Categories[0] = "Everything Computers";
+            answerForm.UpdateQuestionForm(Categories[0].ToString(), 200);
+            answerForm.Show(this);  //Show Form assigning this form as the forms owner
+            Hide();
         }
     }
 }

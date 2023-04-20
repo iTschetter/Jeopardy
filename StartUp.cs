@@ -31,7 +31,7 @@ namespace Jeopardy
             Categories.Add(comboBox6.Text);
             Jeopardy gameForm = new Jeopardy(NumberOfPlayers, ScoreCap, Categories);
             this.Hide();
-            gameForm.ShowDialog();
+            gameForm.Show(this);
 
         }
     }

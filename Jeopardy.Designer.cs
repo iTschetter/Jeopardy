@@ -34,6 +34,14 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -61,9 +69,9 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Jeopardy.Properties.Resources.jeopardyLogo;
-            this.pictureBox2.Location = new System.Drawing.Point(462, -4);
+            this.pictureBox2.Location = new System.Drawing.Point(480, -4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(410, 131);
             this.pictureBox2.TabIndex = 2;
@@ -96,7 +104,7 @@
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Font = new System.Drawing.Font("Showcard Gothic", 26.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(384, 1020);
+            this.label2.Location = new System.Drawing.Point(368, 1020);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(631, 109);
             this.label2.TabIndex = 6;
@@ -114,12 +122,100 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(153, 1283);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(150, 41);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "0";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(456, 1283);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(150, 41);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "0";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(759, 1283);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(150, 41);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "0";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(1062, 1283);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(150, 41);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "0";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Location = new System.Drawing.Point(153, 1242);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(150, 41);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Player 1:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Location = new System.Drawing.Point(456, 1242);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(150, 41);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Player 2:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Location = new System.Drawing.Point(759, 1242);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(150, 41);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Player 3:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Location = new System.Drawing.Point(1062, 1242);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(150, 41);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "Player 4:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Jeopardy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1367, 1377);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox3);
@@ -145,5 +241,13 @@
         private PictureBox pictureBox3;
         private Label label2;
         private Button button1;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label7;
+        private Label label8;
+        private Label label9;
+        private Label label10;
     }
 }
