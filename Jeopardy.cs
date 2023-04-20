@@ -12,36 +12,31 @@ namespace Jeopardy
 {
     public partial class Jeopardy : Form, IDataSource
     {
+        // Setting up the data source
         public IDataSource dataSource = new QuestionDataSource();
         public IEnumerable<Question> Questions => dataSource.Questions;
-        private int _numberOfPlayers = 1;
-        private int _scoreCap = 1500;
-        public int NumberOfPlayers
-        {
-            get { return _numberOfPlayers; }
-            set { _numberOfPlayers = value; }
-        }
-        public int ScoreCap
-        {
-            get { return _scoreCap; }
-            set { _scoreCap = value; }
-        }
+
+        // Setting up the child form
         QuestionAnswerForm answerForm;
         public List<string> Categories = new List<string>();
         public Jeopardy()
         {
             InitializeComponent();
         }
-        public Jeopardy(int numberOfPlayers, int scoreCap, List<string> categories)
+        public Jeopardy(int numberOfPlayers, int scoreCap, List<string> categories, bool losePoints)
         {
             InitializeComponent();
+
+            // Setting up needed form for communication:
             answerForm = new QuestionAnswerForm();
-            NumberOfPlayers = numberOfPlayers;
-            ScoreCap = scoreCap;
+            answerForm.VisibleChanged += new EventHandler(this.answerForm_VisibleChanged);
             Categories = categories;
 
+            // Setting up game environment:
+            GameController masterKey = new GameController(scoreCap, numberOfPlayers, losePoints, this);
+
             // Fixing Score Board
-            switch (NumberOfPlayers)
+            switch (numberOfPlayers)
             {
                 case 1:
 
@@ -103,6 +98,10 @@ namespace Jeopardy
                     break;
             }
         }
+        public void RoundEnded()
+        {
+
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -135,6 +134,13 @@ namespace Jeopardy
             answerForm.UpdateQuestionForm(Categories[0].ToString(), 200);
             answerForm.Show(this);  //Show Form assigning this form as the forms owner
             Hide();
+        }
+        private void answerForm_VisibleChanged(object sender, EventArgs e)
+        {
+            if(answerForm.Visible == false)
+            {
+
+            }
         }
     }
 }

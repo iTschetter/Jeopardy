@@ -12,15 +12,43 @@ namespace Jeopardy
 {
     public partial class QuestionAnswerForm : Form, IDataSource
     {
+        public TextBox userAnswerBox
+        {
+            get
+            {
+                return textBox1;
+            }
+        }
+        public Label answerBox
+        {
+            get
+            {
+                return label3;
+            }
+        }
+        private string _currentcategory = String.Empty;
+        public string CurrentCategory
+        {
+            get { return _currentcategory; }
+            set { _currentcategory = value; }
+        }
+        private int _currentpointvalue;
+        public int CurrentPointValue
+        {
+            get { return _currentpointvalue; }
+            set { _currentpointvalue = value; }
+        }
         public IDataSource dataSource = new QuestionDataSource();
         public IEnumerable<Question> Questions => dataSource.Questions;
         public QuestionAnswerForm()
         {
             InitializeComponent();
         }
-        public void UpdateQuestionForm(string Category, int PointValue)
+        public void UpdateQuestionForm(string category, int pointvalue)
         {
-            label1.Text = (from q in Questions where q.Category == Category && q.PointValue == PointValue select q.Description).First();
+            this.CurrentCategory = category;
+            this.CurrentPointValue = pointvalue;
+            label1.Text = (from q in Questions where q.Category == CurrentCategory && q.PointValue == CurrentPointValue select q.Description).First();
             label1.TextAlign = ContentAlignment.MiddleCenter;
         }
         public void Exit()

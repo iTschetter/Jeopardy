@@ -8,6 +8,7 @@ namespace Jeopardy
 {
     public class GameController
     {
+        List<Player> players = new List<Player>();
         public static int gameFinishedCounter = 30;
         private int _currentGameCounter = 0;
         public int CurrentGameCounter
@@ -21,13 +22,26 @@ namespace Jeopardy
             get { return _currentSelectedPlayer; }
             set { this._currentSelectedPlayer = value; }
         }
-        public GameController() 
+        private int _numberOfPlayers;
+        public int NumberOfPlayers
         {
-            
+            get { return _numberOfPlayers; }
+            set { this._numberOfPlayers = value; }
+        }
+        public GameController(int ScoreCap, int NumberOfPlayers, bool LosePoints, Jeopardy neededForm) 
+        {
+            this.NumberOfPlayers = NumberOfPlayers;
+
+            // Initialzing the players and scoreboard
+            ScoreBoard masterScore = new ScoreBoard(ScoreCap, NumberOfPlayers, LosePoints, neededForm);
+            for (int i = 0; i < NumberOfPlayers; i++)
+            {
+                players.Add(new Player());
+            }
         }
         public void ChangeSelectedPlayer()
         {
-            if(_currentSelectedPlayer == 4)
+            if(_currentSelectedPlayer == NumberOfPlayers)
             {
                 _currentSelectedPlayer = 1;
             } else

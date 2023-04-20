@@ -14,6 +14,12 @@ namespace Jeopardy
             get { return _scoreCap; }
             set { _scoreCap = value; }
         }
+        private bool _losePoints = false;
+        public bool LosePoints
+        {
+            get { return _losePoints; }
+            set { _losePoints = value; }
+        }
         public List<string> Categories = new List<string>();
         public StartUp()
         {
@@ -29,7 +35,11 @@ namespace Jeopardy
             Categories.Add(comboBox4.Text);
             Categories.Add(comboBox5.Text);
             Categories.Add(comboBox6.Text);
-            Jeopardy gameForm = new Jeopardy(NumberOfPlayers, ScoreCap, Categories);
+            if(checkBox1.Checked == true)
+            {
+                LosePoints = true;
+            }
+            Jeopardy gameForm = new Jeopardy(NumberOfPlayers, ScoreCap, Categories, LosePoints);
             this.Hide();
             gameForm.Show(this);
 
