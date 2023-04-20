@@ -42,9 +42,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -67,7 +69,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackColor = System.Drawing.Color.Black;
             this.pictureBox2.Image = global::Jeopardy.Properties.Resources.jeopardyLogo;
             this.pictureBox2.Location = new System.Drawing.Point(480, -4);
             this.pictureBox2.Name = "pictureBox2";
@@ -211,6 +213,15 @@
             this.label10.Text = "Player 4:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Jeopardy.Properties.Resources.blackBackground;
+            this.pictureBox4.Location = new System.Drawing.Point(-1, -14);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(1367, 361);
+            this.pictureBox4.TabIndex = 16;
+            this.pictureBox4.TabStop = false;
+            // 
             // Jeopardy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
@@ -231,6 +242,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox4);
             this.MaximumSize = new System.Drawing.Size(1399, 1465);
             this.MinimumSize = new System.Drawing.Size(1399, 1465);
             this.Name = "Jeopardy";
@@ -240,6 +252,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,5 +273,6 @@
         public Label label8;
         public Label label9;
         public Label label10;
+        private PictureBox pictureBox4;
     }
 }

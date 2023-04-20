@@ -14,19 +14,25 @@ namespace Jeopardy
         public bool LosePointsOnWrong
         {
             get { return _losePointsOnWrong; }
-            set { _losePointsOnWrong = value; }
+            set { this._losePointsOnWrong = value; }
         }
         private int _scoreCap = 10000;
         public int ScoreCap
         {
             get { return _scoreCap; }
-            set { _scoreCap = value; }
+            set { this._scoreCap = value; }
         }
         private int _numberOfPlayers = 1;
         public int NumberOfPlayers
         {
             get { return _numberOfPlayers; }
-            set { _numberOfPlayers = value; }
+            set { this._numberOfPlayers = value; }
+        }
+        private bool _scoreCapReached = false;
+        public bool ScoreCapReached
+        {
+            get { return _scoreCapReached; }
+            set { this._scoreCapReached = value; }
         }
         List<Player> players = new List<Player>();
         public ScoreBoard(int ScoreCap, int NumberOfPlayers, bool LosePoints, Jeopardy neededForm) 
@@ -106,9 +112,27 @@ namespace Jeopardy
                     break;
             }
         }
-        public void UpdateScoreBoard()
+        public void UpdateScoreBoard(int currentlySelectedPlayer, int scoreValue)
         {
+            if (scoreValue >= ScoreCap)
+            {
+                ScoreCapReached = true;
+            }
 
+            if(currentlySelectedPlayer+1 == 1)
+            {
+                myJeopardy.label3.Text = scoreValue.ToString();
+            } else if (currentlySelectedPlayer+1 == 2)
+            {
+                myJeopardy.label4.Text = scoreValue.ToString();
+            } else if (currentlySelectedPlayer+1 == 3)
+            {
+                myJeopardy.label5.Text = scoreValue.ToString();
+            } else
+            {
+                myJeopardy.label6.Text = scoreValue.ToString();
+            }
         }
+
     }
 }

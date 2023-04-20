@@ -12,6 +12,9 @@ namespace Jeopardy
 {
     public partial class Jeopardy : Form, IDataSource
     {
+        //Initializing the game environment
+        GameController masterKey;
+
         // Setting up the data source
         public IDataSource dataSource = new QuestionDataSource();
         public IEnumerable<Question> Questions => dataSource.Questions;
@@ -33,8 +36,10 @@ namespace Jeopardy
             Categories = categories;
 
             // Setting up game environment:
-            GameController masterKey = new GameController(scoreCap, numberOfPlayers, losePoints, this);
+            masterKey = new GameController(scoreCap, numberOfPlayers, losePoints, this);
+            masterKey.SetUpEnvironment();
 
+            /*
             // Fixing Score Board
             switch (numberOfPlayers)
             {
@@ -97,10 +102,7 @@ namespace Jeopardy
                 case 4:
                     break;
             }
-        }
-        public void RoundEnded()
-        {
-
+            */
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -130,16 +132,21 @@ namespace Jeopardy
 
         private void button1_Click(object sender, EventArgs e)
         {
+            masterKey.UpdateKeyPointValue(200);
+
             Categories[0] = "Everything Computers";
             answerForm.UpdateQuestionForm(Categories[0].ToString(), 200);
             answerForm.Show(this);  //Show Form assigning this form as the forms owner
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.BackColor = System.Drawing.Color.Black;
             Hide();
         }
         private void answerForm_VisibleChanged(object sender, EventArgs e)
         {
             if(answerForm.Visible == false)
             {
-
+                masterKey.UpdateEnvironment(answerForm.AnswerChecker);
             }
         }
     }

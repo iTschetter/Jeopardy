@@ -25,13 +25,19 @@ namespace Jeopardy
             ID++;
             this._myId = ID;
         }
-        public void UpdateScore(int valueChange)
+        public void UpdateScore(int valueChange, bool negate)
         {
-            this._score = _score + valueChange;
+            if(negate == false)
+            {
+                this._score = _score + valueChange;
+            } else
+            {
+                this.Score = Score - valueChange;
+            }
         }
         public int GetScore()
         {
-            return this._score;
+            return this.Score;
         }
     }
 }
