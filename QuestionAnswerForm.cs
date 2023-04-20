@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +13,8 @@ namespace Jeopardy
 {
     public partial class QuestionAnswerForm : Form, IDataSource
     {
+        private SoundPlayer incorrectAnswer = new SoundPlayer();
+        private SoundPlayer correctAnswer = new SoundPlayer();
         private string _currentcategory = String.Empty;
         public string CurrentCategory
         {
@@ -35,6 +38,8 @@ namespace Jeopardy
         public QuestionAnswerForm()
         {
             InitializeComponent();
+            incorrectAnswer.SoundLocation = @"C:\Users\Isaia\OneDrive\Desktop\Jeopardy2.0\bin\Sounds\incorrectAnswer.wav";
+            correctAnswer.SoundLocation = @"C:\Users\Isaia\OneDrive\Desktop\Jeopardy2.0\bin\Sounds\correctAnswer.wav";
         }
         public void UpdateQuestionForm(string category, int pointvalue)
         {
@@ -61,13 +66,17 @@ namespace Jeopardy
             if(textBox1.Text.ToLower().ToString() == label3.Text.ToLower().ToString())
             {
                 AnswerChecker = true;
-                System.Media.SystemSounds.Hand.Play();
+                correctAnswer.Play();
             } else
             {
                 AnswerChecker = false;
-                System.Media.SystemSounds.Asterisk.Play();
+                incorrectAnswer.Play();
             }
             label3.ForeColor = Color.GhostWhite;
+        }
+
+        private void QuestionAnswerForm_Load(object sender, EventArgs e)
+        {
         }
     }
 }

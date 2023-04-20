@@ -1,7 +1,10 @@
+using System.Media;
+
 namespace Jeopardy
 {
     public partial class StartUp : Form
     {
+        private SoundPlayer openingSound = new SoundPlayer();
         private int _numberOfPlayers = 1;
         private int _scoreCap = 1500;
         public int NumberOfPlayers
@@ -24,6 +27,7 @@ namespace Jeopardy
         public StartUp()
         {
             InitializeComponent();
+            openingSound.SoundLocation = @"C:\Users\Isaia\OneDrive\Desktop\Jeopardy2.0\bin\Sounds\OpeningSound.wav";
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -40,6 +44,7 @@ namespace Jeopardy
                 LosePoints = true;
             }
             Jeopardy gameForm = new Jeopardy(NumberOfPlayers, ScoreCap, Categories, LosePoints);
+            openingSound.Play();
             this.Hide();
             gameForm.Show(this);
 

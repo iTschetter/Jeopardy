@@ -127,6 +127,7 @@
             this.MinimumSize = new System.Drawing.Size(1692, 1118);
             this.Name = "QuestionAnswerForm";
             this.Text = "QuestionAnswerForm";
+            this.Load += new System.EventHandler(this.QuestionAnswerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
