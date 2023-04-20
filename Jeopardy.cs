@@ -39,7 +39,69 @@ namespace Jeopardy
             NumberOfPlayers = numberOfPlayers;
             ScoreCap = scoreCap;
             Categories = categories;
-            //textBox1.Text = (from q in Questions where q.Category == "Questions about bob" select q.Description).First();
+
+            // Fixing Score Board
+            switch (NumberOfPlayers)
+            {
+                case 1:
+
+                    // Centering Player 1
+                    label7.Location = new System.Drawing.Point(608, 1242);
+                    label3.Location = new System.Drawing.Point(608, 1283);
+
+                    // Hiding Player 2
+                    label8.BorderStyle = BorderStyle.None;
+                    label8.ForeColor = System.Drawing.Color.Black;
+                    label4.ForeColor = System.Drawing.Color.Black;
+
+                    // Hiding Player 3
+                    label9.BorderStyle = BorderStyle.None;
+                    label9.ForeColor = System.Drawing.Color.Black;
+                    label5.ForeColor = System.Drawing.Color.Black;
+
+                    // Hiding Player 4
+                    label10.BorderStyle = BorderStyle.None;
+                    label10.ForeColor = System.Drawing.Color.Black;
+                    label6.ForeColor = System.Drawing.Color.Black;
+                    break;
+                case 2:
+
+                    // Centering Players 1 and 2, respectively
+                    label7.Location = new System.Drawing.Point(456, 1242);
+                    label3.Location = new System.Drawing.Point(456, 1283);
+                    label8.Location = new System.Drawing.Point(759, 1242);
+                    label4.Location = new System.Drawing.Point(759, 1283);
+
+                    // Hiding Player 3
+                    label9.BorderStyle = BorderStyle.None;
+                    label9.ForeColor = System.Drawing.Color.Black;
+                    label5.ForeColor = System.Drawing.Color.Black;
+
+                    // Hiding Player 4
+                    label10.BorderStyle = BorderStyle.None;
+                    label10.ForeColor = System.Drawing.Color.Black;
+                    label6.ForeColor = System.Drawing.Color.Black;
+
+                    break;
+                case 3:
+
+                    // Centering Players 1, 2, and 3, respectively
+                    label7.Location = new System.Drawing.Point(229, 1242);
+                    label3.Location = new System.Drawing.Point(229, 1283);
+                    label8.Location = new System.Drawing.Point(608, 1242);
+                    label4.Location = new System.Drawing.Point(608, 1283);
+                    label9.Location = new System.Drawing.Point(987, 1242);
+                    label5.Location = new System.Drawing.Point(987, 1283);
+
+                    // Hiding Player 4
+                    label10.BorderStyle = BorderStyle.None;
+                    label10.ForeColor = System.Drawing.Color.Black;
+                    label6.ForeColor = System.Drawing.Color.Black;
+
+                    break;
+                case 4:
+                    break;
+            }
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {

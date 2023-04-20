@@ -15,9 +15,25 @@ namespace Jeopardy
             get { return _currentGameCounter; }
             set { this._currentGameCounter = value; }
         }
+        private int _currentSelectedPlayer = 1;
+        public int CurrentSelectedPlayer
+        {
+            get { return _currentSelectedPlayer; }
+            set { this._currentSelectedPlayer = value; }
+        }
         public GameController() 
         {
             
+        }
+        public void ChangeSelectedPlayer()
+        {
+            if(_currentSelectedPlayer == 4)
+            {
+                _currentSelectedPlayer = 1;
+            } else
+            {
+                _currentSelectedPlayer++;
+            }
         }
     }
 }

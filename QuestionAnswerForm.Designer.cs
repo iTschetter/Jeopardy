@@ -121,6 +121,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.MaximumSize = new System.Drawing.Size(1692, 1118);
+            this.MinimumSize = new System.Drawing.Size(1692, 1118);
             this.Name = "QuestionAnswerForm";
             this.Text = "QuestionAnswerForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -286,6 +286,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(832, 1208);
+            this.MinimumSize = new System.Drawing.Size(832, 1208);
             this.Name = "StartUp";
             this.Text = "Pre-Game Settings";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
