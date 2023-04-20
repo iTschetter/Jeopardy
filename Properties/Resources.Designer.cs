@@ -63,6 +63,16 @@ namespace Jeopardy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap blackBackground {
+            get {
+                object obj = ResourceManager.GetObject("blackBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap blankJeopardy {
             get {
                 object obj = ResourceManager.GetObject("blankJeopardy", resourceCulture);

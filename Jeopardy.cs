@@ -13,6 +13,7 @@ namespace Jeopardy
     public partial class Jeopardy : Form, IDataSource
     {
         public IDataSource dataSource = new QuestionDataSource();
+        public IEnumerable<Question> Questions => dataSource.Questions;
         private int _numberOfPlayers = 1;
         private int _scoreCap = 1500;
         public int NumberOfPlayers
@@ -25,9 +26,7 @@ namespace Jeopardy
             get { return _scoreCap; }
             set { _scoreCap = value; }
         }
-
-        public IEnumerable<Question> Questions => dataSource.Questions;
-
+        QuestionAnswerForm answerForm = new QuestionAnswerForm();
         public List<string> Categories = new List<string>();
         public Jeopardy()
         {
@@ -39,9 +38,8 @@ namespace Jeopardy
             NumberOfPlayers = numberOfPlayers;
             ScoreCap = scoreCap;
             Categories = categories;
-            textBox1.Text = (from q in Questions where q.Category == "Questions about bob" select q.Description).First();
+            //textBox1.Text = (from q in Questions where q.Category == "Questions about bob" select q.Description).First();
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -60,6 +58,16 @@ namespace Jeopardy
         private void Jeopardy_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
