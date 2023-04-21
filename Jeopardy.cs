@@ -37,6 +37,7 @@ namespace Jeopardy
             answerForm.VisibleChanged += new EventHandler(this.answerForm_VisibleChanged);
             Categories = categories;
 
+
             // Setting up game environment:
             masterKey = new GameController(scoreCap, numberOfPlayers, losePoints, this);
             masterKey.SetUpEnvironment();

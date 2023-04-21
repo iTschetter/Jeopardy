@@ -42,11 +42,15 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -69,7 +73,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.BackColor = System.Drawing.Color.Black;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Jeopardy.Properties.Resources.jeopardyLogo;
             this.pictureBox2.Location = new System.Drawing.Point(480, -4);
             this.pictureBox2.Name = "pictureBox2";
@@ -213,14 +217,77 @@
             this.label10.Text = "Player 4:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox4
+            // label11
             // 
-            this.pictureBox4.Image = global::Jeopardy.Properties.Resources.blackBackground;
-            this.pictureBox4.Location = new System.Drawing.Point(-1, -14);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(1367, 361);
-            this.pictureBox4.TabIndex = 16;
-            this.pictureBox4.TabStop = false;
+            this.label11.BackColor = System.Drawing.Color.DodgerBlue;
+            this.label11.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label11.Location = new System.Drawing.Point(-1, 130);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(224, 149);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "label11";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.DodgerBlue;
+            this.label12.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label12.Location = new System.Drawing.Point(224, 130);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(229, 149);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "label12";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.DodgerBlue;
+            this.label13.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label13.Location = new System.Drawing.Point(449, 130);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(231, 149);
+            this.label13.TabIndex = 19;
+            this.label13.Text = "label13";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.DodgerBlue;
+            this.label14.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label14.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label14.Location = new System.Drawing.Point(672, 130);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(234, 149);
+            this.label14.TabIndex = 20;
+            this.label14.Text = "label14";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.Color.DodgerBlue;
+            this.label15.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label15.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label15.Location = new System.Drawing.Point(904, 130);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(232, 149);
+            this.label15.TabIndex = 21;
+            this.label15.Text = "label15";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.Color.DodgerBlue;
+            this.label16.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label16.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label16.Location = new System.Drawing.Point(1134, 130);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(232, 149);
+            this.label16.TabIndex = 22;
+            this.label16.Text = "label16";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Jeopardy
             // 
@@ -228,6 +295,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1367, 1377);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
@@ -242,7 +315,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox4);
             this.MaximumSize = new System.Drawing.Size(1399, 1465);
             this.MinimumSize = new System.Drawing.Size(1399, 1465);
             this.Name = "Jeopardy";
@@ -252,7 +324,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,6 +344,11 @@
         public Label label8;
         public Label label9;
         public Label label10;
-        private PictureBox pictureBox4;
+        private Label label11;
+        private Label label12;
+        private Label label13;
+        private Label label14;
+        private Label label15;
+        private Label label16;
     }
 }
