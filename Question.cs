@@ -20,8 +20,6 @@ namespace Jeopardy
         public IEnumerable<Question> Questions =>
             new Question[]
             {
-                //Question Format: new Question { Description = "", Answer="W is", PointValue=, Category=""},
-
                 // Fix the ordering of the point values based on the difficulty of the questions!!
 
                 // 1a: Everything Computers
@@ -92,7 +90,21 @@ namespace Jeopardy
                 new Question { Description = "This Japanese art involves paper folding", Answer="What is Origami", PointValue=400, Category="Category: NULL"},
                 new Question { Description = "This dog's name was popularized from the cartoon 'Mickey Mouse.'", Answer="Who is Pluto", PointValue=600, Category="Category: NULL"},
                 new Question { Description = "This popular horror author penned the novel 'The Stand.'", Answer="Who is Stephen King", PointValue=800, Category="Category: NULL"},
-                new Question { Description = "In one of the most popular Dr. Seuss books, Sam-I-Am won't eat this dish.", Answer="What is green eggs and ham", PointValue=1000, Category="Category: NULL"}
+                new Question { Description = "In one of the most popular Dr. Seuss books, Sam-I-Am won't eat this dish.", Answer="What is green eggs and ham", PointValue=1000, Category="Category: NULL"},
+
+                // 6a: Entertainment Arts
+                new Question { Description = "This district in New York is famous for hosting multiple touring musicals.", Answer = "What is Broadway", PointValue=200, Category="Entertainment Arts"},
+                new Question { Description = "The 'Oprah Winfrey Show' ran for this many seasons. (In numerical form.)", Answer = "What is 25 seasons", PointValue=400, Category="Entertainment Arts"},
+                new Question { Description = "This year was when the Academy Awards was started.", Answer = "What is 1929", PointValue=600, Category="Entertainment Arts"},
+                new Question { Description = "BBC's non-abbreviated form is this.", Answer = "What is British Broadcasting Coporation", PointValue=800, Category="Entertainment Arts"},
+                new Question { Description = "This man was the first Saturday Night Live’s first celebrity host.", Answer = "Who is George Carlin", PointValue=1000, Category="Entertainment Arts"},
+
+                // 6b: Ridiculous Trivia
+                new Question { Description = "This household object's speed is measured in 'Mickeys.'", Answer = "What is a computer mouse", PointValue=200, Category="Ridiculous Trivia"},
+                new Question { Description = "This part of the human body is where the zygomatic bone is found", Answer = "What is the facial cheek", PointValue=400, Category="Ridiculous Trivia"},
+                new Question { Description = "This man was known for claiming he could 'drive the devil away with a fart.'", Answer = "Who is Martin Luther", PointValue=600, Category="Ridiculous Trivia"},
+                new Question { Description = "The liquor Cointreau is known for being this flavor.", Answer = "What is Orange", PointValue=800, Category="Ridiculous Trivia"},
+                new Question { Description = "This is what you call a group of unicorns.", Answer = "What is a blessing", PointValue=1000, Category="Ridiculous Trivia"}
             };
     }
 }
