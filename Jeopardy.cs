@@ -111,7 +111,13 @@ namespace Jeopardy
             if(answerForm.Visible == false)
             {
                 masterKey.UpdateEnvironment(answerForm.AnswerChecker);
-                newRound.Play();
+                if(masterKey.GameFinished == false)
+                {
+                    newRound.Play();
+                } else
+                {
+                    FinishedGame.Play();
+                }
             } else if (answerForm.Visible == true)
             {
                 answerForm.textBox1.Select();
