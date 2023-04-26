@@ -49,22 +49,45 @@ namespace Jeopardy
             get { return _gameFinished; }
             set { this._gameFinished = value; }
         }
-        // Constructors and Methods:
-        public GameController(int ScoreCap, int NumberOfPlayers, bool LosePoints, Jeopardy neededForm) 
+        private Jeopardy _jeopardyBoard;
+        public Jeopardy JeopardyBoard
         {
+            get { return _jeopardyBoard; }
+            set { this._jeopardyBoard = value; }
+        }
+        private GameFinished _thankyouFinish;
+        public GameFinished ThankYouFinish
+        {
+            get { return _thankyouFinish; }
+            set { this._thankyouFinish = value; }
+        }
+
+        // ---------------------- Constructors/Methods: ----------------------
+        public GameController(int ScoreCap, int NumberOfPlayers, bool LosePoints, Jeopardy jeopardyForm, GameFinished thankyouForm) 
+        {
+            this.JeopardyBoard = jeopardyForm;
+            this.ThankYouFinish = thankyouForm;
             this.NumberOfPlayers = NumberOfPlayers;
             this.LosePoints = LosePoints;
 
             // Initialzing the players and scoreboard
-            masterScore = new ScoreBoard(ScoreCap, NumberOfPlayers, LosePoints, neededForm);
+            masterScore = new ScoreBoard(ScoreCap, NumberOfPlayers, LosePoints, jeopardyForm);
             for (int i = 0; i < NumberOfPlayers; i++)
             {
                 players.Add(new Player());
             }
         }
-        public void SetUpEnvironment()
+        public void SetUpEnvironment(List<string> categories)
         {
             masterScore.CreateScoreBoard();
+
+            // Setting up category headers on board:
+            JeopardyBoard.label11.Text = categories[0];
+            JeopardyBoard.label12.Text = categories[1];
+            JeopardyBoard.label13.Text = categories[2];
+            JeopardyBoard.label14.Text = categories[3];
+            JeopardyBoard.label15.Text = categories[4];
+            JeopardyBoard.label16.Text = categories[5];
         }
         public void UpdateEnvironment(bool correctAnswer)
         {
@@ -90,13 +113,29 @@ namespace Jeopardy
             {
                 GameFinished = true;
             }
+
+            // Game Finished Test:
             if(GameFinished == true)
             {
-                CloseEnvironment();
-            }            
+                JeopardyBoard.GameFinished();
+            } else
+            {
+                // Setting up new round:
+                NewRound();
+            }           
 
-            // Setting up new round:
-            NewRound();
+        }
+        public void FinalizeMatch()
+        {
+            if(masterScore.ScoreCapReached == true)
+            {
+                ThankYouFinish.label1.Text = "Score Cap Reached! The Winner is Player " + masterScore.WinningPlayer.ToString();
+                ThankYouFinish.label4.Text = "at " + players[masterScore.WinningPlayer - 1].GetScore().ToString() + " points!";
+            } else
+            {
+                ThankYouFinish.label1.Text = "The Winner is Player " + masterScore.WinningPlayer+1.ToString() + "at " + players[masterScore.WinningPlayer].GetScore().ToString() + "points!";
+                ThankYouFinish.label4.Text = "at " + players[masterScore.WinningPlayer - 1].GetScore().ToString() + " points!";
+            }
         }
         public void UpdateKeyPointValue(int newCurrentPointValue)
         {
@@ -112,10 +151,6 @@ namespace Jeopardy
                 _currentSelectedPlayer++;
             }
             CurrentRoundCounter++;
-        }
-        public void CloseEnvironment()
-        {
-
         }
     }
 }

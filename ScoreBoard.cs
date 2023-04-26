@@ -34,6 +34,12 @@ namespace Jeopardy
             get { return _scoreCapReached; }
             set { this._scoreCapReached = value; }
         }
+        private int _winningPlayer = 5;
+        public int WinningPlayer
+        {
+            get { return _winningPlayer; }
+            set { this._winningPlayer = value; }
+        }
         List<Player> players = new List<Player>();
         public ScoreBoard(int ScoreCap, int NumberOfPlayers, bool LosePoints, Jeopardy neededForm) 
         {
@@ -117,6 +123,7 @@ namespace Jeopardy
             if (scoreValue >= ScoreCap)
             {
                 ScoreCapReached = true;
+                WinningPlayer = currentlySelectedPlayer + 1;
             }
 
             if(currentlySelectedPlayer+1 == 1)

@@ -97,7 +97,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(1369, 901);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -109,7 +108,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(410, 131);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label1
             // 
@@ -119,7 +117,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 41);
             this.label1.TabIndex = 4;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox3
             // 
@@ -762,7 +759,6 @@
             this.Name = "Jeopardy";
             this.Text = "Jeopardy";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Jeopardy_FormClosed);
-            this.Load += new System.EventHandler(this.Jeopardy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -786,12 +782,6 @@
         public Label label8;
         public Label label9;
         public Label label10;
-        private Label label11;
-        private Label label12;
-        private Label label13;
-        private Label label14;
-        private Label label15;
-        private Label label16;
         private Button button2;
         private Button button3;
         private Button button4;
@@ -821,5 +811,11 @@
         private Button button28;
         private Button button29;
         private Button button30;
+        public Label label11;
+        public Label label12;
+        public Label label13;
+        public Label label14;
+        public Label label15;
+        public Label label16;
     }
 }

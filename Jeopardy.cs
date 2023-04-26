@@ -13,7 +13,10 @@ namespace Jeopardy
 {
     public partial class Jeopardy : Form, IDataSource
     {
+        // ---------------------- Properties: ----------------------
+
         private SoundPlayer newRound = new SoundPlayer();
+        private SoundPlayer FinishedGame = new SoundPlayer();
         //Initializing the game environment
         GameController masterKey;
 
@@ -21,9 +24,14 @@ namespace Jeopardy
         public IDataSource dataSource = new QuestionDataSource();
         public IEnumerable<Question> Questions => dataSource.Questions;
 
-        // Setting up the child form
+        // Setting up the child forms:
         QuestionAnswerForm answerForm;
+        GameFinished thankyouForm;
+
+        // Preparing category information:
         public List<string> Categories = new List<string>();
+
+        // ---------------------- Constructors: ----------------------
         public Jeopardy()
         {
             InitializeComponent();
@@ -32,52 +40,57 @@ namespace Jeopardy
         {
             InitializeComponent();
 
-            // Setting up needed form for communication:
+            // Setting up needed forms for communication:
             answerForm = new QuestionAnswerForm();
             answerForm.VisibleChanged += new EventHandler(this.answerForm_VisibleChanged);
-            Categories = categories;
+            answerForm.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.answerForm_FormClosing);
+            thankyouForm = new GameFinished();
+            thankyouForm.button2.Click += new EventHandler(this.thankyouForm_Button2_Click);
+            thankyouForm.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.thankyouForm_FormClosing);
 
-            // Setting up category headers on board:
-            label11.Text = Categories[0];
-            label12.Text = Categories[1];
-            label13.Text = Categories[2];
-            label14.Text = Categories[3];
-            label15.Text = Categories[4];
-            label16.Text = Categories[5];
+
+            Categories = categories;
 
 
             // Setting up game environment:
-            masterKey = new GameController(scoreCap, numberOfPlayers, losePoints, this);
-            masterKey.SetUpEnvironment();
+            masterKey = new GameController(scoreCap, numberOfPlayers, losePoints, this, thankyouForm);
+            masterKey.SetUpEnvironment(Categories);
             newRound.SoundLocation = @"C:\Users\Isaia\OneDrive\Desktop\Jeopardy2.0\bin\Sounds\newRound.wav";
-
+            FinishedGame.SoundLocation = @"C:\Users\Isaia\OneDrive\Desktop\Jeopardy2.0\bin\Sounds\gameFinished.wav";
         }
-        private void pictureBox1_Click(object sender, EventArgs e)
+
+        // ---------------------- Events/Methods: ----------------------
+        public void GameFinished()
         {
-
+            masterKey.FinalizeMatch();
+            FinishedGame.Play();
+            thankyouForm.Show(this);
+            Hide();
         }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
+        
+        private void answerForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            Application.Exit();
+            //thankyouForm.Close();
+            //this.Close();
         }
-
-        private void Jeopardy_Load(object sender, EventArgs e)
+        private void thankyouForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            Application.Exit();
+            //answerForm.Close();
+            //this.Close();
         }
-
+        private void thankyouForm_Button2_Click(object sender, EventArgs e)
+        {
+            answerForm.Close();
+            thankyouForm.Close();
+            this.Close();
+        }
         private void Jeopardy_FormClosed(object sender, FormClosedEventArgs e)
         {
             answerForm.Exit();
             Application.Exit();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             // Setting up QuestionAnswer Form environment:

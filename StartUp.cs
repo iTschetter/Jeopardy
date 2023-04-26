@@ -24,6 +24,7 @@ namespace Jeopardy
             set { _losePoints = value; }
         }
         public List<string> Categories = new List<string>();
+        Jeopardy gameForm;
         public StartUp()
         {
             InitializeComponent();
@@ -43,10 +44,11 @@ namespace Jeopardy
             {
                 LosePoints = true;
             }
-            Jeopardy gameForm = new Jeopardy(NumberOfPlayers, ScoreCap, Categories, LosePoints);
+            gameForm = new Jeopardy(NumberOfPlayers, ScoreCap, Categories, LosePoints);
+
             openingSound.Play();
-            this.Hide();
             gameForm.Show(this);
+            this.Hide();
 
         }
     }
