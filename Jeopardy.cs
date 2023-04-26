@@ -37,6 +37,14 @@ namespace Jeopardy
             answerForm.VisibleChanged += new EventHandler(this.answerForm_VisibleChanged);
             Categories = categories;
 
+            // Setting up category headers on board:
+            label11.Text = Categories[0];
+            label12.Text = Categories[1];
+            label13.Text = Categories[2];
+            label14.Text = Categories[3];
+            label15.Text = Categories[4];
+            label16.Text = Categories[5];
+
 
             // Setting up game environment:
             masterKey = new GameController(scoreCap, numberOfPlayers, losePoints, this);
@@ -72,23 +80,44 @@ namespace Jeopardy
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Setting up QuestionAnswer Form environment:
             masterKey.UpdateKeyPointValue(200);
+            answerForm.UpdateQuestionForm(Categories[0].ToString(), 200, false);
 
-            Categories[0] = "Everything Computers";
-            answerForm.UpdateQuestionForm(Categories[0].ToString(), 200);
-            answerForm.Show(this);  //Show Form assigning this form as the forms owner
+            // Performing switch to QuestionAnswer Form:
+            answerForm.Show(this);
             button1.FlatStyle = FlatStyle.Flat;
             button1.FlatAppearance.BorderSize = 0;
             button1.BackColor = System.Drawing.Color.Black;
+            button1.Enabled = false;
             Hide();
         }
         private void answerForm_VisibleChanged(object sender, EventArgs e)
         {
+            // Performing switch back to Jeopardy Board:
             if(answerForm.Visible == false)
             {
                 masterKey.UpdateEnvironment(answerForm.AnswerChecker);
                 newRound.Play();
+            } else if (answerForm.Visible == true)
+            {
+                answerForm.textBox1.Select();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Setting up QuestionAnswer Form environment:
+            masterKey.UpdateKeyPointValue(200);
+            answerForm.UpdateQuestionForm(Categories[1].ToString(), 200, false);
+
+            // Performing switch to QuestionAnswer Form:
+            answerForm.Show(this);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.BackColor = System.Drawing.Color.Black;
+            button2.Enabled = false;
+            Hide();
         }
     }
 }

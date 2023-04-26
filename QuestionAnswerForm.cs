@@ -33,6 +33,12 @@ namespace Jeopardy
             get { return _answerChecker; }
             set { this._answerChecker = value; } 
         }
+        private bool _submitButtonLocker = false;
+        public bool SubmitButtonLocker
+        {
+            get { return _submitButtonLocker; }
+            set { this._submitButtonLocker = value; }
+        }
         public IDataSource dataSource = new QuestionDataSource();
         public IEnumerable<Question> Questions => dataSource.Questions;
         public QuestionAnswerForm()
@@ -41,12 +47,14 @@ namespace Jeopardy
             incorrectAnswer.SoundLocation = @"C:\Users\Isaia\OneDrive\Desktop\Jeopardy2.0\bin\Sounds\incorrectAnswer.wav";
             correctAnswer.SoundLocation = @"C:\Users\Isaia\OneDrive\Desktop\Jeopardy2.0\bin\Sounds\correctAnswer.wav";
         }
-        public void UpdateQuestionForm(string category, int pointvalue)
+        public void UpdateQuestionForm(string category, int pointvalue, bool submitButtonLock)
         {
+            label3.ForeColor = Color.Blue;
+            textBox1.Text = "Your Answer Here";
+            this.SubmitButtonLocker = submitButtonLock;
             this.CurrentCategory = category;
             this.CurrentPointValue = pointvalue;
-            label1.Text = (from q in Questions where q.Category == CurrentCategory && q.PointValue == CurrentPointValue select q.Description).First();
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            textBox2.Text = (from q in Questions where q.Category == CurrentCategory && q.PointValue == CurrentPointValue select q.Description).First();
             label3.Text = (from q in Questions where q.Category == CurrentCategory && q.PointValue == CurrentPointValue select q.Answer).First();
             label3.TextAlign = ContentAlignment.MiddleCenter;
         }
@@ -63,16 +71,21 @@ namespace Jeopardy
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text.ToLower().ToString() == label3.Text.ToLower().ToString())
+            if(SubmitButtonLocker == false)
             {
-                AnswerChecker = true;
-                correctAnswer.Play();
-            } else
-            {
-                AnswerChecker = false;
-                incorrectAnswer.Play();
+                if (textBox1.Text.ToLower().ToString() == label3.Text.ToLower().ToString())
+                {
+                    AnswerChecker = true;
+                    correctAnswer.Play();
+                }
+                else
+                {
+                    AnswerChecker = false;
+                    incorrectAnswer.Play();
+                }
+                label3.ForeColor = Color.GhostWhite;
+                SubmitButtonLocker = true;
             }
-            label3.ForeColor = Color.GhostWhite;
         }
 
         private void QuestionAnswerForm_Load(object sender, EventArgs e)
