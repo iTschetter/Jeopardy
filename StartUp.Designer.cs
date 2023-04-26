@@ -117,8 +117,8 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Category 1a",
-            "Category 1b"});
+            "Everything Computers",
+            "OOP Trivia"});
             this.comboBox1.Location = new System.Drawing.Point(222, 382);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(302, 49);
@@ -137,8 +137,8 @@
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "Category 2a",
-            "Category 2b"});
+            "Everything Cars",
+            "Food and its History"});
             this.comboBox2.Location = new System.Drawing.Point(222, 452);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(302, 49);
@@ -148,8 +148,8 @@
             // 
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
-            "Category 3a",
-            "Category 3b"});
+            "Human Health",
+            "World History"});
             this.comboBox3.Location = new System.Drawing.Point(220, 522);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(302, 49);
@@ -159,8 +159,8 @@
             // 
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
-            "Category 4a",
-            "Category 4b"});
+            "World Geography",
+            "The World of Music"});
             this.comboBox4.Location = new System.Drawing.Point(220, 593);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(302, 49);
@@ -170,8 +170,8 @@
             // 
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Items.AddRange(new object[] {
-            "Category 5a",
-            "Category 5b"});
+            "Impossible Trivia",
+            "Category: NULL"});
             this.comboBox5.Location = new System.Drawing.Point(220, 668);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(302, 49);
@@ -181,8 +181,8 @@
             // 
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Items.AddRange(new object[] {
-            "Category 6a",
-            "Category 6b"});
+            "Entertainment Arts",
+            "Ridiculous Trivia"});
             this.comboBox6.Location = new System.Drawing.Point(220, 743);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(302, 49);
