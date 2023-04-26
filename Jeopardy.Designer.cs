@@ -87,7 +87,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox1.BackColor = System.Drawing.Color.Blue;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Image = global::Jeopardy.Properties.Resources.blankJeopardy1;
             this.pictureBox1.ImageLocation = "";
@@ -144,7 +144,9 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackColor = System.Drawing.Color.LightGray;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Castellar", 14.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(14, 299);
             this.button1.Name = "button1";
@@ -320,7 +322,9 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackColor = System.Drawing.Color.LightGray;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Castellar", 14.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.Location = new System.Drawing.Point(241, 299);
             this.button2.Name = "button2";
@@ -332,7 +336,9 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackColor = System.Drawing.Color.LightGray;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Castellar", 14.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.Location = new System.Drawing.Point(470, 299);
             this.button3.Name = "button3";
@@ -344,7 +350,9 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackColor = System.Drawing.Color.LightGray;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Castellar", 14.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.Location = new System.Drawing.Point(697, 299);
             this.button4.Name = "button4";
@@ -356,7 +364,9 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BackColor = System.Drawing.Color.LightGray;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Castellar", 14.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button5.Location = new System.Drawing.Point(925, 299);
             this.button5.Name = "button5";
@@ -368,7 +378,9 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.BackColor = System.Drawing.Color.LightGray;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Castellar", 14.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button6.Location = new System.Drawing.Point(1154, 299);
             this.button6.Name = "button6";
@@ -388,6 +400,7 @@
             this.button7.TabIndex = 28;
             this.button7.Text = "$400";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -399,6 +412,7 @@
             this.button8.TabIndex = 29;
             this.button8.Text = "$400";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -410,6 +424,7 @@
             this.button9.TabIndex = 30;
             this.button9.Text = "$400";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -421,6 +436,7 @@
             this.button10.TabIndex = 31;
             this.button10.Text = "$400";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -432,6 +448,7 @@
             this.button11.TabIndex = 32;
             this.button11.Text = "$400";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
@@ -443,10 +460,13 @@
             this.button12.TabIndex = 33;
             this.button12.Text = "$400";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button13
             // 
-            this.button13.BackColor = System.Drawing.Color.Transparent;
+            this.button13.BackColor = System.Drawing.Color.LightGray;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Castellar", 14.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button13.Location = new System.Drawing.Point(14, 595);
             this.button13.Name = "button13";
@@ -454,10 +474,13 @@
             this.button13.TabIndex = 34;
             this.button13.Text = "$600";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button14
             // 
-            this.button14.BackColor = System.Drawing.Color.Transparent;
+            this.button14.BackColor = System.Drawing.Color.LightGray;
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Castellar", 14.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button14.Location = new System.Drawing.Point(241, 595);
             this.button14.Name = "button14";
@@ -465,10 +488,13 @@
             this.button14.TabIndex = 35;
             this.button14.Text = "$600";
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button15
             // 
-            this.button15.BackColor = System.Drawing.Color.Transparent;
+            this.button15.BackColor = System.Drawing.Color.LightGray;
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Castellar", 14.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button15.Location = new System.Drawing.Point(469, 595);
             this.button15.Name = "button15";
@@ -476,10 +502,13 @@
             this.button15.TabIndex = 36;
             this.button15.Text = "$600";
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button16
             // 
-            this.button16.BackColor = System.Drawing.Color.Transparent;
+            this.button16.BackColor = System.Drawing.Color.LightGray;
+            this.button16.FlatAppearance.BorderSize = 0;
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Font = new System.Drawing.Font("Castellar", 14.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button16.Location = new System.Drawing.Point(696, 595);
             this.button16.Name = "button16";
@@ -487,10 +516,13 @@
             this.button16.TabIndex = 37;
             this.button16.Text = "$600";
             this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // button17
             // 
-            this.button17.BackColor = System.Drawing.Color.Transparent;
+            this.button17.BackColor = System.Drawing.Color.LightGray;
+            this.button17.FlatAppearance.BorderSize = 0;
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button17.Font = new System.Drawing.Font("Castellar", 14.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button17.Location = new System.Drawing.Point(924, 595);
             this.button17.Name = "button17";
@@ -498,10 +530,13 @@
             this.button17.TabIndex = 38;
             this.button17.Text = "$600";
             this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // button18
             // 
-            this.button18.BackColor = System.Drawing.Color.Transparent;
+            this.button18.BackColor = System.Drawing.Color.LightGray;
+            this.button18.FlatAppearance.BorderSize = 0;
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button18.Font = new System.Drawing.Font("Castellar", 14.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button18.Location = new System.Drawing.Point(1154, 595);
             this.button18.Name = "button18";
@@ -509,6 +544,7 @@
             this.button18.TabIndex = 39;
             this.button18.Text = "$600";
             this.button18.UseVisualStyleBackColor = false;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // button19
             // 
@@ -520,6 +556,7 @@
             this.button19.TabIndex = 40;
             this.button19.Text = "$800";
             this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button20
             // 
@@ -531,6 +568,7 @@
             this.button20.TabIndex = 41;
             this.button20.Text = "$800";
             this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button21
             // 
@@ -542,6 +580,7 @@
             this.button21.TabIndex = 42;
             this.button21.Text = "$800";
             this.button21.UseVisualStyleBackColor = false;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // button22
             // 
@@ -553,6 +592,7 @@
             this.button22.TabIndex = 43;
             this.button22.Text = "$800";
             this.button22.UseVisualStyleBackColor = false;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // button23
             // 
@@ -564,6 +604,7 @@
             this.button23.TabIndex = 44;
             this.button23.Text = "$800";
             this.button23.UseVisualStyleBackColor = false;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
             // button24
             // 
@@ -575,10 +616,13 @@
             this.button24.TabIndex = 45;
             this.button24.Text = "$800";
             this.button24.UseVisualStyleBackColor = false;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // button25
             // 
-            this.button25.BackColor = System.Drawing.Color.Transparent;
+            this.button25.BackColor = System.Drawing.Color.LightGray;
+            this.button25.FlatAppearance.BorderSize = 0;
+            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button25.Font = new System.Drawing.Font("Castellar", 14.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button25.Location = new System.Drawing.Point(10, 891);
             this.button25.Name = "button25";
@@ -586,10 +630,13 @@
             this.button25.TabIndex = 46;
             this.button25.Text = "$1000";
             this.button25.UseVisualStyleBackColor = false;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
             // button26
             // 
-            this.button26.BackColor = System.Drawing.Color.Transparent;
+            this.button26.BackColor = System.Drawing.Color.LightGray;
+            this.button26.FlatAppearance.BorderSize = 0;
+            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button26.Font = new System.Drawing.Font("Castellar", 14.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button26.Location = new System.Drawing.Point(238, 891);
             this.button26.Name = "button26";
@@ -597,10 +644,13 @@
             this.button26.TabIndex = 47;
             this.button26.Text = "$1000";
             this.button26.UseVisualStyleBackColor = false;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
             // button27
             // 
-            this.button27.BackColor = System.Drawing.Color.Transparent;
+            this.button27.BackColor = System.Drawing.Color.LightGray;
+            this.button27.FlatAppearance.BorderSize = 0;
+            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button27.Font = new System.Drawing.Font("Castellar", 14.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button27.Location = new System.Drawing.Point(467, 891);
             this.button27.Name = "button27";
@@ -608,10 +658,13 @@
             this.button27.TabIndex = 48;
             this.button27.Text = "$1000";
             this.button27.UseVisualStyleBackColor = false;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
             // 
             // button28
             // 
-            this.button28.BackColor = System.Drawing.Color.Transparent;
+            this.button28.BackColor = System.Drawing.Color.LightGray;
+            this.button28.FlatAppearance.BorderSize = 0;
+            this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button28.Font = new System.Drawing.Font("Castellar", 14.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button28.Location = new System.Drawing.Point(694, 891);
             this.button28.Name = "button28";
@@ -619,10 +672,13 @@
             this.button28.TabIndex = 49;
             this.button28.Text = "$1000";
             this.button28.UseVisualStyleBackColor = false;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
             // 
             // button29
             // 
-            this.button29.BackColor = System.Drawing.Color.Transparent;
+            this.button29.BackColor = System.Drawing.Color.LightGray;
+            this.button29.FlatAppearance.BorderSize = 0;
+            this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button29.Font = new System.Drawing.Font("Castellar", 14.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button29.Location = new System.Drawing.Point(922, 891);
             this.button29.Name = "button29";
@@ -630,10 +686,13 @@
             this.button29.TabIndex = 50;
             this.button29.Text = "$1000";
             this.button29.UseVisualStyleBackColor = false;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
             // 
             // button30
             // 
-            this.button30.BackColor = System.Drawing.Color.Transparent;
+            this.button30.BackColor = System.Drawing.Color.LightGray;
+            this.button30.FlatAppearance.BorderSize = 0;
+            this.button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button30.Font = new System.Drawing.Font("Castellar", 14.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button30.Location = new System.Drawing.Point(1150, 891);
             this.button30.Name = "button30";
@@ -641,6 +700,7 @@
             this.button30.TabIndex = 51;
             this.button30.Text = "$1000";
             this.button30.UseVisualStyleBackColor = false;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
             // 
             // Jeopardy
             // 
