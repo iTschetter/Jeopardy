@@ -120,6 +120,7 @@ namespace Jeopardy
             if (masterScore.ScoreCapReached == true)
             {
                 GameFinished = true;
+                masterScore.DetermineWinner();
             } else if (CurrentRoundCounter == gameFinishedCounter - 1)
             {
                 GameFinished = true;
