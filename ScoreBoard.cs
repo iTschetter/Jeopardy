@@ -10,6 +10,8 @@ namespace Jeopardy
 {
     public class ScoreBoard
     {
+        // ---------------------- Properties/Fields: ----------------------
+        #region Properties/Fields
         public Jeopardy myJeopardy;
         private bool _losePointsOnWrong = false;
         public bool LosePointsOnWrong
@@ -49,6 +51,9 @@ namespace Jeopardy
         }
         public List<int> WinningPlayers = new List<int>();
         List<Player> players = new List<Player>();
+        #endregion
+        // ---------------------- Constructor: ----------------------
+        #region Constructor
         public ScoreBoard(int ScoreCap, int NumberOfPlayers, bool LosePoints, Jeopardy neededForm) 
         {
             this.ScoreCap = ScoreCap;
@@ -61,6 +66,9 @@ namespace Jeopardy
             }
             LosePointsOnWrong = LosePoints;
         }
+        #endregion
+        // ---------------------- Methods: ----------------------
+        #region Methods
         public void CreateScoreBoard()
         {
             // Fixing Score Board
@@ -160,6 +168,6 @@ namespace Jeopardy
                 }
             }
         }
-
+        #endregion
     }
 }

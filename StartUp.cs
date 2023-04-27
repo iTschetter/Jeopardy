@@ -4,6 +4,8 @@ namespace Jeopardy
 {
     public partial class StartUp : Form
     {
+        // ---------------------- Properties/Fields: ----------------------
+        #region properties/fields
         private SoundPlayer openingSound = new SoundPlayer();
         private int _numberOfPlayers = 1;
         private int _scoreCap = 1500;
@@ -25,11 +27,17 @@ namespace Jeopardy
         }
         public List<string> Categories = new List<string>();
         Jeopardy gameForm;
+        #endregion
+        // ---------------------- Constructor: ----------------------
+        #region constructor
         public StartUp()
         {
             InitializeComponent();
             openingSound.SoundLocation = @"C:\Users\Isaia\OneDrive\Desktop\Jeopardy2.0\bin\Sounds\OpeningSound.wav";
         }
+        #endregion
+        // ---------------------- Events: ---------------------- 
+        #region Events
         private void button1_Click(object sender, EventArgs e)
         {
             NumberOfPlayers = ((int)numericUpDown1.Value);
@@ -51,5 +59,6 @@ namespace Jeopardy
             this.Hide();
 
         }
+#endregion
     }
 }

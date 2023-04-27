@@ -13,8 +13,8 @@ namespace Jeopardy
 {
     public partial class Jeopardy : Form, IDataSource
     {
-        // ---------------------- Properties: ----------------------
-
+        // ---------------------- Properties/Fields: ----------------------
+        #region Properties/Fields
         private SoundPlayer newRound = new SoundPlayer();
         private SoundPlayer FinishedGame = new SoundPlayer();
         //Initializing the game environment
@@ -30,8 +30,9 @@ namespace Jeopardy
 
         // Preparing category information:
         public List<string> Categories = new List<string>();
-
+        #endregion
         // ---------------------- Constructors: ----------------------
+        #region Constructors
         public Jeopardy()
         {
             InitializeComponent();
@@ -58,8 +59,9 @@ namespace Jeopardy
             newRound.SoundLocation = @"C:\Users\Isaia\OneDrive\Desktop\Jeopardy2.0\bin\Sounds\newRound.wav";
             FinishedGame.SoundLocation = @"C:\Users\Isaia\OneDrive\Desktop\Jeopardy2.0\bin\Sounds\gameFinished.wav";
         }
-
-        // ---------------------- Events/Methods: ----------------------
+        #endregion
+        // ---------------------- Method(s): ----------------------
+        #region Method(s)
         public void GameFinished()
         {
             masterKey.FinalizeMatch();
@@ -67,7 +69,9 @@ namespace Jeopardy
             thankyouForm.Show(this);
             Hide();
         }
-        
+        #endregion
+        // ---------------------- Events: ----------------------
+        #region Events
         private void answerForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -558,5 +562,6 @@ namespace Jeopardy
             button30.Enabled = false;
             Hide();
         }
+        #endregion
     }
 }

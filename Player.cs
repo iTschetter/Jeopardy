@@ -8,6 +8,8 @@ namespace Jeopardy
 {
     public class Player
     {
+        // ---------------------- Properties/Fields: ----------------------
+        #region Properties/Fields
         private static int ID = 1;
         private int _myId = 1;
         public int MyId
@@ -20,6 +22,9 @@ namespace Jeopardy
             get { return _score; }
             set { _score = value; }
         }
+        #endregion
+        // ---------------------- Constructors: ----------------------
+        #region Constructors
         public Player()
         {
             ID++;
@@ -31,6 +36,9 @@ namespace Jeopardy
             this._myId = ID;
             this.Score = startingScore;
         }
+        #endregion
+        // ---------------------- Methods: ----------------------
+        #region Methods
         public void UpdateScore(int valueChange, bool negate)
         {
             if(negate == false)
@@ -45,5 +53,6 @@ namespace Jeopardy
         {
             return this.Score;
         }
+        #endregion
     }
 }

@@ -8,6 +8,8 @@ namespace Jeopardy
 {
     public class GameController
     {
+        // ---------------------- Properties/Fields: ----------------------
+        #region Properties/Fields
         ScoreBoard masterScore;
         List<Player> players = new List<Player>();
         
@@ -61,8 +63,9 @@ namespace Jeopardy
             get { return _thankyouFinish; }
             set { this._thankyouFinish = value; }
         }
-
-        // ---------------------- Constructors/Methods: ----------------------
+        #endregion
+        // ---------------------- Constructor(s): ----------------------
+        #region Constructor(s)
         public GameController(int ScoreCap, int NumberOfPlayers, bool LosePoints, Jeopardy jeopardyForm, GameFinished thankyouForm) 
         {
             this.JeopardyBoard = jeopardyForm;
@@ -77,6 +80,9 @@ namespace Jeopardy
                 players.Add(new Player());
             }
         }
+        #endregion
+        // ---------------------- Methods: ----------------------
+        #region Methods
         public void SetUpEnvironment(List<string> categories)
         {
             masterScore.CreateScoreBoard();
@@ -135,8 +141,19 @@ namespace Jeopardy
         {
             if(masterScore.WinningPlayers.Count() > 1)
             {
-                ThankYouFinish.label1.Text = "The Winner is Players are " + masterScore.WinningPlayers.ToList().ToString();
-                ThankYouFinish.label4.Text = "at " + players[masterScore.WinningPlayers[0] - 1].GetScore().ToString() + " points!";
+                if(masterScore.WinningPlayers.Count() == 2)
+                {
+                    ThankYouFinish.label1.Text = "There was a tie! The Winning Players are " + masterScore.WinningPlayers[0] + " and " + masterScore.WinningPlayers[1];
+                    ThankYouFinish.label4.Text = "at " + players[masterScore.WinningPlayers[0] - 1].GetScore().ToString() + " points!";
+                } else if (masterScore.WinningPlayers.Count() == 3)
+                {
+                    ThankYouFinish.label1.Text = "There was a tie! The Winning Players are " + masterScore.WinningPlayers[0] + ", " + masterScore.WinningPlayers[1] + ", and " + masterScore.WinningPlayers[2];
+                    ThankYouFinish.label4.Text = "at " + players[masterScore.WinningPlayers[0] - 1].GetScore().ToString() + " points!";
+                } else
+                {
+                    ThankYouFinish.label1.Text = "All players tied!";
+                    ThankYouFinish.label4.Text = "With " + players[masterScore.WinningPlayers[0] - 1].GetScore().ToString() + " points!";
+                }
             } else
             {
                 if (masterScore.ScoreCapReached == true)
@@ -166,5 +183,6 @@ namespace Jeopardy
             }
             CurrentRoundCounter++;
         }
+        #endregion
     }
 }

@@ -13,6 +13,8 @@ namespace Jeopardy
 {
     public partial class QuestionAnswerForm : Form, IDataSource
     {
+        // ---------------------- Properties/Fields: ----------------------
+        #region Properties/Fields
         private SoundPlayer incorrectAnswer = new SoundPlayer();
         private SoundPlayer correctAnswer = new SoundPlayer();
         private string _currentcategory = String.Empty;
@@ -41,12 +43,18 @@ namespace Jeopardy
         }
         public IDataSource dataSource = new QuestionDataSource();
         public IEnumerable<Question> Questions => dataSource.Questions;
+        #endregion
+        // ---------------------- Constructor: ----------------------
+        #region Constructor
         public QuestionAnswerForm()
         {
             InitializeComponent();
             incorrectAnswer.SoundLocation = @"C:\Users\Isaia\OneDrive\Desktop\Jeopardy2.0\bin\Sounds\incorrectAnswer.wav";
             correctAnswer.SoundLocation = @"C:\Users\Isaia\OneDrive\Desktop\Jeopardy2.0\bin\Sounds\correctAnswer.wav";
         }
+        #endregion
+        // ---------------------- Methods: ----------------------
+        #region Methods
         public void UpdateQuestionForm(string category, int pointvalue, bool submitButtonLock)
         {
             label3.ForeColor = Color.Blue;
@@ -62,7 +70,9 @@ namespace Jeopardy
         {
             Application.Exit();
         }
-
+        #endregion
+        // ---------------------- Events: ----------------------
+        #region Events
         private void button2_Click(object sender, EventArgs e)
         {
             Owner.Show();
@@ -87,5 +97,6 @@ namespace Jeopardy
                 SubmitButtonLocker = true;
             }
         }
+        #endregion
     }
 }

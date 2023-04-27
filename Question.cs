@@ -10,13 +10,18 @@ namespace Jeopardy
 {
     public class Question
     {
+        // ---------------------- Properties: ----------------------'
+        #region Properties
         public string Description { get; set;  } = String.Empty;
         public int PointValue { get; set; }
         public string Category { get; set; } = String.Empty;
         public string Answer { get; set; } = String.Empty;
     }
+    #endregion
     public class QuestionDataSource : Question, IDataSource
     {
+        // ---------------------- Questions: ----------------------
+        #region Questions
         public IEnumerable<Question> Questions =>
             new Question[]
             {
@@ -106,5 +111,6 @@ namespace Jeopardy
                 new Question { Description = "The liquor Cointreau is known for being this flavor.", Answer = "What is Orange", PointValue=800, Category="Ridiculous Trivia"},
                 new Question { Description = "This is what you call a group of unicorns.", Answer = "What is a blessing", PointValue=1000, Category="Ridiculous Trivia"}
             };
+        #endregion
     }
 }
