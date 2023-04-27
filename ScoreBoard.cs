@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms.Design;
@@ -40,6 +41,13 @@ namespace Jeopardy
             get { return _winningPlayer; }
             set { this._winningPlayer = value; }
         }
+        private int _winningScore = 0;
+        public int WinningScore
+        {
+            get { return _winningScore; }
+            set { this._winningScore = value; }
+        }
+        public List<int> WinningPlayers = new List<int>();
         List<Player> players = new List<Player>();
         public ScoreBoard(int ScoreCap, int NumberOfPlayers, bool LosePoints, Jeopardy neededForm) 
         {
@@ -138,6 +146,18 @@ namespace Jeopardy
             } else
             {
                 myJeopardy.label6.Text = scoreValue.ToString();
+            }
+        }
+        public void DetermineWinner()
+        {
+            int i = 0;
+            WinningScore = (from c in players select c.GetScore()).Max();
+            for (i = 0; i < players.Count(); i++)
+            {
+                if (WinningScore == players[i].GetScore())
+                {
+                    WinningPlayers.Add(i + 1);
+                }
             }
         }
 

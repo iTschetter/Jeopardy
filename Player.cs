@@ -25,6 +25,12 @@ namespace Jeopardy
             ID++;
             this._myId = ID;
         }
+        public Player(int startingScore)
+        {
+            ID++;
+            this._myId = ID;
+            this.Score = startingScore;
+        }
         public void UpdateScore(int valueChange, bool negate)
         {
             if(negate == false)

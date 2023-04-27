@@ -15,7 +15,7 @@ namespace Jeopardy
         public string Category { get; set; } = String.Empty;
         public string Answer { get; set; } = String.Empty;
     }
-    public class QuestionDataSource : IDataSource
+    public class QuestionDataSource : Question, IDataSource
     {
         public IEnumerable<Question> Questions =>
             new Question[]

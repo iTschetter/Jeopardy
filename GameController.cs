@@ -89,6 +89,11 @@ namespace Jeopardy
             JeopardyBoard.label15.Text = categories[4];
             JeopardyBoard.label16.Text = categories[5];
         }
+        // Use when Jeopardy.cs handles category setup:
+        public void SetUpEnvironment()
+        {
+            masterScore.CreateScoreBoard();
+        }
         public void UpdateEnvironment(bool correctAnswer)
         {
 
@@ -112,6 +117,7 @@ namespace Jeopardy
             } else if (CurrentRoundCounter == gameFinishedCounter - 1)
             {
                 GameFinished = true;
+                masterScore.DetermineWinner();
             }
 
             // Game Finished Test:
@@ -127,14 +133,22 @@ namespace Jeopardy
         }
         public void FinalizeMatch()
         {
-            if(masterScore.ScoreCapReached == true)
+            if(masterScore.WinningPlayers.Count() > 1)
             {
-                ThankYouFinish.label1.Text = "Score Cap Reached! The Winner is Player " + masterScore.WinningPlayer.ToString();
-                ThankYouFinish.label4.Text = "at " + players[masterScore.WinningPlayer - 1].GetScore().ToString() + " points!";
+                ThankYouFinish.label1.Text = "The Winner is Players are " + masterScore.WinningPlayers.ToList().ToString();
+                ThankYouFinish.label4.Text = "at " + players[masterScore.WinningPlayers[0] - 1].GetScore().ToString() + " points!";
             } else
             {
-                ThankYouFinish.label1.Text = "The Winner is Player " + masterScore.WinningPlayer+1.ToString() + "at " + players[masterScore.WinningPlayer].GetScore().ToString() + "points!";
-                ThankYouFinish.label4.Text = "at " + players[masterScore.WinningPlayer - 1].GetScore().ToString() + " points!";
+                if (masterScore.ScoreCapReached == true)
+                {
+                    ThankYouFinish.label1.Text = "Score Cap Reached! The Winner is Player " + masterScore.WinningPlayers[0].ToString();
+                    ThankYouFinish.label4.Text = "at " + players[masterScore.WinningPlayers[0] - 1].GetScore().ToString() + " points!";
+                }
+                else
+                {
+                    ThankYouFinish.label1.Text = "The Winner is Player " + masterScore.WinningPlayers[0].ToString();
+                    ThankYouFinish.label4.Text = "at " + players[masterScore.WinningPlayers[0] - 1].GetScore().ToString() + " points!";
+                }
             }
         }
         public void UpdateKeyPointValue(int newCurrentPointValue)

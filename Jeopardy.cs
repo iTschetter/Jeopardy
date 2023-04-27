@@ -473,7 +473,7 @@ namespace Jeopardy
         {
             // Setting up QuestionAnswer Form environment:
             masterKey.UpdateKeyPointValue(1000);
-            answerForm.UpdateQuestionForm(Categories[0].ToString(), 800, false);
+            answerForm.UpdateQuestionForm(Categories[0].ToString(), 1000, false);
 
             // Performing switch to QuestionAnswer Form:
             answerForm.Show(this);
@@ -488,7 +488,7 @@ namespace Jeopardy
         {
             // Setting up QuestionAnswer Form environment:
             masterKey.UpdateKeyPointValue(1000);
-            answerForm.UpdateQuestionForm(Categories[1].ToString(), 800, false);
+            answerForm.UpdateQuestionForm(Categories[1].ToString(), 1000, false);
 
             // Performing switch to QuestionAnswer Form:
             answerForm.Show(this);
@@ -503,7 +503,7 @@ namespace Jeopardy
         {
             // Setting up QuestionAnswer Form environment:
             masterKey.UpdateKeyPointValue(1000);
-            answerForm.UpdateQuestionForm(Categories[2].ToString(), 800, false);
+            answerForm.UpdateQuestionForm(Categories[2].ToString(), 1000, false);
 
             // Performing switch to QuestionAnswer Form:
             answerForm.Show(this);
@@ -518,7 +518,7 @@ namespace Jeopardy
         {
             // Setting up QuestionAnswer Form environment:
             masterKey.UpdateKeyPointValue(1000);
-            answerForm.UpdateQuestionForm(Categories[3].ToString(), 800, false);
+            answerForm.UpdateQuestionForm(Categories[3].ToString(), 1000, false);
 
             // Performing switch to QuestionAnswer Form:
             answerForm.Show(this);
@@ -533,7 +533,7 @@ namespace Jeopardy
         {
             // Setting up QuestionAnswer Form environment:
             masterKey.UpdateKeyPointValue(1000);
-            answerForm.UpdateQuestionForm(Categories[4].ToString(), 800, false);
+            answerForm.UpdateQuestionForm(Categories[4].ToString(), 1000, false);
 
             // Performing switch to QuestionAnswer Form:
             answerForm.Show(this);
@@ -548,7 +548,7 @@ namespace Jeopardy
         {
             // Setting up QuestionAnswer Form environment:
             masterKey.UpdateKeyPointValue(1000);
-            answerForm.UpdateQuestionForm(Categories[5].ToString(), 800, false);
+            answerForm.UpdateQuestionForm(Categories[5].ToString(), 1000, false);
 
             // Performing switch to QuestionAnswer Form:
             answerForm.Show(this);

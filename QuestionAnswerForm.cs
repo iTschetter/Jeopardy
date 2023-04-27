@@ -87,9 +87,5 @@ namespace Jeopardy
                 SubmitButtonLocker = true;
             }
         }
-
-        private void QuestionAnswerForm_Load(object sender, EventArgs e)
-        {
-        }
     }
 }
