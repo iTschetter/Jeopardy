@@ -62,7 +62,7 @@ namespace Jeopardy
             this.NumberOfPlayers = NumberOfPlayers;
             for(int i=0;i<NumberOfPlayers; i++) 
             {
-                players.Add(new Player());
+                players.Add(new Player(0));
             }
             LosePointsOnWrong = LosePoints;
         }
