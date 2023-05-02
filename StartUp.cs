@@ -40,24 +40,29 @@ namespace Jeopardy
         #region Events
         private void button1_Click(object sender, EventArgs e)
         {
-            NumberOfPlayers = ((int)numericUpDown1.Value);
-            ScoreCap = ((int)numericUpDown2.Value);
-            Categories.Add(comboBox1.Text);
-            Categories.Add(comboBox2.Text);
-            Categories.Add(comboBox3.Text);
-            Categories.Add(comboBox4.Text);
-            Categories.Add(comboBox5.Text);
-            Categories.Add(comboBox6.Text);
-            if(checkBox1.Checked == true)
+            if(comboBox1.Text == "" || comboBox2.Text == "" || comboBox3.Text == "" || comboBox4.Text == "" || comboBox4.Text == "" || comboBox5.Text == "" || comboBox6.Text == "")
             {
-                LosePoints = true;
+                MessageBox.Show("Please finish selecting categories before starting match!");
+            } else
+            {
+                NumberOfPlayers = ((int)numericUpDown1.Value);
+                ScoreCap = ((int)numericUpDown2.Value);
+                Categories.Add(comboBox1.Text);
+                Categories.Add(comboBox2.Text);
+                Categories.Add(comboBox3.Text);
+                Categories.Add(comboBox4.Text);
+                Categories.Add(comboBox5.Text);
+                Categories.Add(comboBox6.Text);
+                if (checkBox1.Checked == true)
+                {
+                    LosePoints = true;
+                }
+                gameForm = new Jeopardy(NumberOfPlayers, ScoreCap, Categories, LosePoints);
+
+                openingSound.Play();
+                gameForm.Show(this);
+                this.Hide();
             }
-            gameForm = new Jeopardy(NumberOfPlayers, ScoreCap, Categories, LosePoints);
-
-            openingSound.Play();
-            gameForm.Show(this);
-            this.Hide();
-
         }
 #endregion
     }
