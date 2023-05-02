@@ -160,7 +160,8 @@ namespace Jeopardy
         {
             int i = 0;
             WinningScore = 0;
-            for (i = 0; i < players.Count(); i++)
+            WinningPlayers.Clear();
+            for (i = 0; i <= players.Count()-1; i++)
             {
                 if (WinningScore < players[i].GetScore())
                 {
@@ -168,6 +169,25 @@ namespace Jeopardy
                     WinningPlayers.Clear();
                     WinningPlayers.Add(i + 1);
                 } else if (WinningScore == players[i].GetScore())
+                {
+                    WinningPlayers.Add(i + 1);
+                }
+            }
+        }
+        public void DetermineWinner(List<Player> players)
+        {
+            int i = 0;
+            WinningScore = 0;
+            WinningPlayers.Clear();
+            for (i = 0; i <= players.Count() - 1; i++)
+            {
+                if (WinningScore < players[i].GetScore())
+                {
+                    WinningScore = players[i].GetScore();
+                    WinningPlayers.Clear();
+                    WinningPlayers.Add(i + 1);
+                }
+                else if (WinningScore == players[i].GetScore())
                 {
                     WinningPlayers.Add(i + 1);
                 }

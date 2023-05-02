@@ -140,6 +140,7 @@ namespace Jeopardy
         }
         public void FinalizeMatch()
         {
+            masterScore.DetermineWinner(players);
             if(masterScore.WinningPlayers.Count() > 1)
             {
                 if(masterScore.WinningPlayers.Count() == 2)
