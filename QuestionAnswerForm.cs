@@ -49,8 +49,8 @@ namespace Jeopardy
         public QuestionAnswerForm()
         {
             InitializeComponent();
-            incorrectAnswer.SoundLocation = @"C:\Users\Isaia\OneDrive\Desktop\Jeopardy2.0\bin\Sounds\incorrectAnswer.wav";
-            correctAnswer.SoundLocation = @"C:\Users\Isaia\OneDrive\Desktop\Jeopardy2.0\bin\Sounds\correctAnswer.wav";
+            incorrectAnswer.SoundLocation = @"Sounds\incorrectAnswer.wav";
+            correctAnswer.SoundLocation = @"Sounds\correctAnswer.wav";
         }
         #endregion
         // ---------------------- Methods: ----------------------

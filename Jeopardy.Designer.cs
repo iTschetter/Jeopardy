@@ -84,8 +84,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)  // HEREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Blue;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -100,7 +100,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None; // HEREEEEEEEEEEEEEEEEEEEEEEEEEEE
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Jeopardy.Properties.Resources.jeopardyLogo;
             this.pictureBox2.Location = new System.Drawing.Point(480, -4);
@@ -120,7 +120,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Jeopardy.Properties.Resources.blackBackground;
+            this.pictureBox3.Image = global::Jeopardy.Properties.Resources.blackBackground;  // HEREEEEEEEEEEEEEEEE
             this.pictureBox3.Location = new System.Drawing.Point(-1, 1020);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(1367, 361);

@@ -56,8 +56,8 @@ namespace Jeopardy
             // Setting up game environment:
             masterKey = new GameController(scoreCap, numberOfPlayers, losePoints, this, thankyouForm);
             masterKey.SetUpEnvironment(Categories);
-            newRound.SoundLocation = @"C:\Users\Isaia\OneDrive\Desktop\Jeopardy2.0\bin\Sounds\newRound.wav";
-            FinishedGame.SoundLocation = @"C:\Users\Isaia\OneDrive\Desktop\Jeopardy2.0\bin\Sounds\gameFinished.wav";
+            newRound.SoundLocation = @"Sounds\newRound.wav";
+            FinishedGame.SoundLocation = @"Sounds\gameFinished.wav";
         }
         #endregion
         // ---------------------- Method(s): ----------------------

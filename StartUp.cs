@@ -33,7 +33,8 @@ namespace Jeopardy
         public StartUp()
         {
             InitializeComponent();
-            openingSound.SoundLocation = @"C:\Users\Isaia\OneDrive\Desktop\Jeopardy2.0\bin\Sounds\OpeningSound.wav";
+            string soundPath = Path.Combine("Sounds", "OpeningSound.wav");
+            openingSound.SoundLocation = soundPath;
         }
         #endregion
         // ---------------------- Events: ---------------------- 
